@@ -7,7 +7,7 @@
     tools:context=".DetailsActivity">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
         app:srcCompat="@drawable/property_1_img_1" />
 
     <LinearLayout
@@ -47,7 +47,7 @@
             android:orientation="vertical">
 
             <TextView
-
+                android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
@@ -74,7 +74,7 @@
                     android:orientation="vertical">
 
                     <TextView
-
+                        android:id="@+id/bedroomTextView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -102,12 +102,11 @@
                     android:orientation="vertical">
 
                     <TextView
-
+                        android:id="@+id/bathroomsTextView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-
                         android:padding="20dp"
                         android:text="1"
                         android:textSize="22sp" />
@@ -130,12 +129,11 @@
                     android:orientation="vertical">
 
                     <TextView
-
+                        android:id="@+id/yearTextView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-
                         android:padding="20dp"
                         android:text="2002"
                         android:textSize="22sp" />
@@ -153,7 +151,23 @@
             </LinearLayout>
         </LinearLayout>
 
+
+
     </LinearLayout>
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+
+        android:text="Hello"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
