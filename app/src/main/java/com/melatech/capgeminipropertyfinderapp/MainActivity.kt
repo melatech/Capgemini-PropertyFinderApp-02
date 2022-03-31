@@ -22,6 +22,25 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
     val baths = intArrayOf(2, 2, 1)
     val years = intArrayOf(1978, 2010, 2002)
 
+    val property_1_images = arrayListOf<Int>()
+    val property_2_images = arrayListOf<Int>()
+    val property_3_images = arrayListOf<Int>()
+
+    val allImagesArr: MutableList<ArrayList<Int>> = mutableListOf()
+
+
+    /*
+    [[first group of images], [second group of images], [third group of images]]
+
+     */
+
+
+
+
+
+
+
+
     fun populateData(){
 
         descriptions.add("Waterfront Acreage & a magnificent home, shop & barn. A rare and fabulous offering! A Rancher style home on a 10.94 acre property. This location could not be better. The ultimate peaceful and quiet area, yet still close to town. Dream shop and barn, fenced, great for horses. One owner. - For more info click Multimedia")
@@ -31,6 +50,21 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         titles.add("\$825,000")
         titles.add("\$499,900")
         titles.add("\$839,900")
+
+        property_1_images.add(R.drawable.property_1_img_1)
+        property_1_images.add(R.drawable.property_1_img_2)
+        property_1_images.add(R.drawable.property_1_img_3)
+        allImagesArr.add(property_1_images)
+
+        property_2_images.add(R.drawable.property_2_img_1)
+        property_2_images.add(R.drawable.property_2_img_2)
+        property_2_images.add(R.drawable.property_2_img_3)
+        allImagesArr.add(property_2_images)
+
+        property_3_images.add(R.drawable.property_3_img_1)
+        property_3_images.add(R.drawable.property_3_img_2)
+        allImagesArr.add(property_3_images)
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,8 +107,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         extras.putString("titleKey", titles[index])
         extras.putString("descriptionKey", descriptions[index])
 
-        intent.putExtras(extras)
+        extras.putIntegerArrayList("imagesKey", allImagesArr[index])
 
+        intent.putExtras(extras)
         startActivity(intent)
     }
 }
