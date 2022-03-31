@@ -82,7 +82,7 @@
                 android:orientation="vertical">
 
                 <TextView
-
+                    android:id="@+id/card_1_title_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:gravity="center"
@@ -214,7 +214,7 @@
                 android:orientation="vertical">
 
                 <TextView
-
+                    android:id="@+id/card_2_title_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:gravity="center"
@@ -346,7 +346,7 @@
                 android:orientation="vertical">
 
                 <TextView
-
+                    android:id="@+id/card_3_title_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:gravity="center"

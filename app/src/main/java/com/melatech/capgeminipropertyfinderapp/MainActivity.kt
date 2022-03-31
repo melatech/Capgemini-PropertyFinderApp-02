@@ -5,15 +5,48 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() , View.OnClickListener{
     lateinit var card1: LinearLayout
     lateinit var card2: LinearLayout
     lateinit var card3: LinearLayout
 
+    lateinit var card1TitleTextView: TextView
+    lateinit var card2TitleTextView: TextView
+    lateinit var card3TitleTextView: TextView
+
+    var titles: MutableList<String> = mutableListOf()
+    var descriptions: MutableList<String> = mutableListOf()
+    val beds = intArrayOf(3, 2, 1)
+    val baths = intArrayOf(2, 2, 1)
+    val years = intArrayOf(1978, 2010, 2002)
+
+    fun populateData(){
+
+        descriptions.add("Waterfront Acreage & a magnificent home, shop & barn. A rare and fabulous offering! A Rancher style home on a 10.94 acre property. This location could not be better. The ultimate peaceful and quiet area, yet still close to town. Dream shop and barn, fenced, great for horses. One owner. - For more info click Multimedia")
+        descriptions.add("2.98 acre property is within minutes of downtown Merritt and the Coquihalla! Zoned CR1 this fully fenced property has a 44 X 30 garage with pit for the heavy duty mechanic or ? and a 15 X 20 shed/workshop/potential guest cabin/b& b plus a 2 car carport all with metal roofs & siding. The 1296 sq ft home has been FRESHLY PAINTED and a NEW APPLIANCE PACKAGE added. The 2 bedroom, 1 full bath home has had the Electrical Upgrade (Silver Seal) done recently. There is a huge greenhouse style addition (19'7\\\" X 17'10\\\") and the most gorgeous view of the city & mountains beyond. Owner says good producing drilled well approx 150 ft deep & previous subdivision plan on file in Kamloops. 100 amp service in house & 200 amp service for the garage & workshop. With a little TLC you'll be loving your country living with a spectacular view!")
+        descriptions.add("Description: LOOKING FOR PRIVACY? HERE IT IS! Beautifully landscaped paradise, with massive 338 feet frontage, peaceful and extremely private 3 acres \\\"estate\\\" in Maple Ridge. It is perfect for you and your family to come back to nature. Minutes to Whonnock Elementary, Whonnock Lake and a golf course. Enjoy your own private forest out your front and back door. This fantastic location in the heart of wilderness offers unlimited options and all privacy one could want! Truly a rare find of park-like living. The value is mostly in land with solid, clean mobile home and Large shop plus double carport. (No for sale sign on the property)")
+
+        titles.add("\$825,000")
+        titles.add("\$499,900")
+        titles.add("\$839,900")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        populateData()
+
+        card1TitleTextView = findViewById(R.id.card_1_title_TextView)
+        card1TitleTextView.text = titles[0]
+        card2TitleTextView = findViewById(R.id.card_2_title_TextView)
+        card2TitleTextView.text = titles[1]
+        card3TitleTextView = findViewById(R.id.card_3_title_TextView)
+        card3TitleTextView.text = titles[2]
+
+
         card1 = findViewById(R.id.card_1)
         card2 = findViewById(R.id.card_2)
         card3 = findViewById(R.id.card_3)
