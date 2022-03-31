@@ -56,7 +56,7 @@
 
 
         <LinearLayout
-            android:id="@+id/myLinear1"
+            android:id="@+id/card_1"
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:orientation="horizontal"
@@ -187,14 +187,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/myLinear2"
+            android:id="@+id/card_2"
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:orientation="horizontal"
             android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/myLinear1">
+            app:layout_constraintTop_toBottomOf="@id/card_1">
 
 
             <ImageView
@@ -319,14 +319,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/myLinear3"
+            android:id="@+id/card_3"
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:orientation="horizontal"
             android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/myLinear2">
+            app:layout_constraintTop_toBottomOf="@id/card_2">
 
 
             <ImageView
