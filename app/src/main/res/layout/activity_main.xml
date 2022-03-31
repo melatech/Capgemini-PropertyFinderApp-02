@@ -352,7 +352,7 @@
                     android:gravity="center"
                     android:text="LOOKING FOR PRIVACY"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="normal" />
 
                 <View
@@ -378,7 +378,6 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center"
-
                             android:text="1"
                             android:textSize="16sp" />
 
@@ -388,7 +387,6 @@
                             android:layout_height="29dp"
                             android:layout_weight="0"
                             android:gravity="center"
-
                             android:text="bedrooms"
                             android:textSize="10sp" />
                     </LinearLayout>
