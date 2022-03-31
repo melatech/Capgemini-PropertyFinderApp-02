@@ -56,8 +56,24 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         card3.setOnClickListener(this)
     }
 
-    override fun onClick(p0: View?) {
+    override fun onClick(view: View?) {
         val intent = Intent(this, DetailsActivity::class.java)
+        var index = 0
+        when(view!!.id){
+            R.id.card_1 -> {index = 0}
+            R.id.card_2 -> {index = 1}
+            R.id.card_3-> {index = 2}
+
+        }
+
+        val extras = Bundle()
+        extras.putInt("bedsKey", beds[index])
+        extras.putInt("bathsKey", baths[index])
+        extras.putInt("yearsKey", years[index])
+        extras.putString("titleKey", titles[index])
+        extras.putString("descriptionKey", descriptions[index])
+
+        intent.putExtras(extras)
 
         startActivity(intent)
     }
