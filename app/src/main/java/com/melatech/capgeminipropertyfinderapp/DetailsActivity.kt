@@ -25,7 +25,11 @@ class DetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_details)
         backButton = findViewById(R.id.backButton)
         backButton.setOnClickListener { finish() }
+        fetchData()
 
+    }
+
+    fun fetchData(){
         val intent = intent
         val extras = intent.extras
 
@@ -56,9 +60,22 @@ class DetailsActivity : AppCompatActivity() {
         imageView.setImageResource(images!![index])
         imageView.setOnClickListener {
             index++
-            if(index == images.size)
-                index = 0
-            imageView.setImageResource(images[index])
+
+            showNextImage(index, images)
+
         }
     }
+
+    fun showNextImage(index: Int, imageArr: ArrayList<Int>){
+        var mIndex = index
+        if(mIndex == imageArr.size)
+            mIndex = 0
+        imageView.setImageResource(imageArr[mIndex])
+
+
+    }
+
+
+
+
 }
