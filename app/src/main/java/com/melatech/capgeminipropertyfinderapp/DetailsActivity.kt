@@ -1,10 +1,13 @@
 package com.melatech.capgeminipropertyfinderapp
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 
 class DetailsActivity : AppCompatActivity() {
     lateinit var backButton: Button
@@ -51,9 +54,11 @@ class DetailsActivity : AppCompatActivity() {
 
         var index = 0
         imageView.setImageResource(images!![index])
-
-
-
-
+        imageView.setOnClickListener {
+            index++
+            if(index == images.size)
+                index = 0
+            imageView.setImageResource(images[index])
+        }
     }
 }

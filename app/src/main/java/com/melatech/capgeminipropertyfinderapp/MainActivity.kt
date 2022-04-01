@@ -90,7 +90,6 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             R.id.card_1 -> {index = 0}
             R.id.card_2 -> {index = 1}
             R.id.card_3-> {index = 2}
-
         }
 
         val extras = Bundle()
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         extras.putString("titleKey", titles[index])
         extras.putString("descriptionKey", descriptions[index])
 
-        extras.putIntegerArrayList("imagesKey", allImagesArr[index])
+        extras.putIntegerArrayList("imageKey", allImagesArr[index])
 
         intent.putExtras(extras)
         startActivity(intent)
