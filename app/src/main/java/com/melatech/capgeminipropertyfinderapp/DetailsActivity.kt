@@ -3,6 +3,7 @@ package com.melatech.capgeminipropertyfinderapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 class DetailsActivity : AppCompatActivity() {
@@ -12,6 +13,9 @@ class DetailsActivity : AppCompatActivity() {
     lateinit var bedsTextView: TextView
     lateinit var bathsTextView: TextView
     lateinit var yearsTextView: TextView
+    lateinit var imageView: ImageView
+    lateinit var card2ImageView: ImageView
+    lateinit var card3ImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +45,15 @@ class DetailsActivity : AppCompatActivity() {
         val year = extras.getInt("yearsKey")
         yearsTextView = findViewById(R.id.yearTextView)
         yearsTextView.text = year.toString()
+
+        val images = extras.getIntegerArrayList("imageKey")
+        imageView = findViewById(R.id.detailImageView)
+
+        var index = 0
+        imageView.setImageResource(images!![index])
+
+
+
 
     }
 }

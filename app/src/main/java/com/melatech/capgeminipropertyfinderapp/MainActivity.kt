@@ -28,18 +28,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
     val allImagesArr: MutableList<ArrayList<Int>> = mutableListOf()
 
-
     /*
     [[first group of images], [second group of images], [third group of images]]
 
      */
-
-
-
-
-
-
-
 
     fun populateData(){
 
@@ -59,6 +51,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         property_2_images.add(R.drawable.property_2_img_1)
         property_2_images.add(R.drawable.property_2_img_2)
         property_2_images.add(R.drawable.property_2_img_3)
+        property_2_images.add(R.drawable.property_2_img_4)
         allImagesArr.add(property_2_images)
 
         property_3_images.add(R.drawable.property_3_img_1)
